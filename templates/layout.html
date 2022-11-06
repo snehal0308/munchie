@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>{% block title %}{% endblock title %} | Munchie</title>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark"  style="background-color: #FECD70;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/" style="font-family:  Blueberry">Munchie</a>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <a class="nav-link active" id="home" href="/">Home</a>
+            <button class="navbar-toggler">
+            </button>
+
+
+            <a class="nav-link active" id="login" href="/login">Login/ Logout</a>
+            <button class="navbar-toggler">
+            </button>
+
+            <a class="nav-link active" id="contact" href="/contact">Face any issues? Contact us </a>
+            <button class="navbar-toggler">
+            </button>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+
+    
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: #FECD70 ;">
+      © 2022 Copyright:
+      <a class="text-dark">Made with love</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</body>
+
+</html>

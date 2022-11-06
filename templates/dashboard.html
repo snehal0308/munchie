@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block main %}
+
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom  p-5 p-md-3 mb-4" style="user-select: auto;">
+    <h1 class="h2" style="user-select: auto;">Dashboard</h1>
+    <div class="btn-toolbar mb-2 mb-md-0" style="user-select: auto;">
+      <div class="btn-group me-2" style="user-select: auto;">
+        <button type="button" class="btn btn-sm btn-outline-secondary" style="user-select: auto;">Share</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" style="user-select: auto;">Export</button>
+      </div>
+      <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" style="user-select: auto;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" aria-hidden="true" style="user-select: auto;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select: auto;"></rect><line x1="16" y1="2" x2="16" y2="6" style="user-select: auto;"></line><line x1="8" y1="2" x2="8" y2="6" style="user-select: auto;"></line><line x1="3" y1="10" x2="21" y2="10" style="user-select: auto;"></line></svg>
+        This week
+      </button>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <br />
+
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Title</th>
+          <th scope="col">Content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Preferences</td>
+          <td>Chinese</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Budget</td>
+          <td>500</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Proximity</td>
+            <td>Within 2-3kms</td>
+            <td>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+    <script type="text/javascript">
+    window.onload = function () {
+      var chart = new CanvasJS.Chart("chartContainer",
+      {
+  
+        title:{
+        text: "Earthquakes - per month"
+        },
+         data: [
+        {
+          type: "line",
+  
+          dataPoints: [
+          { x: new Day('Monday', 00, 1), y: 450 },
+          { x: new Day('Monday', 01, 1), y: 414 },
+          { x: new Day('Monday', 02, 1), y: 520 },
+          { x: new Day('Monday', 03, 1), y: 460 },
+          { x: new Day('Monday', 04, 1), y: 450 },
+          { x: new Day('Monday', 05, 1), y: 500 },
+          { x: new Day('Monday', 06, 1), y: 480 },
+          { x: new Day('Monday', 07, 1), y: 480 },
+          { x: new Day('Monday', 08, 1), y: 410 },
+          { x: new Day('Monday', 09, 1), y: 500 },
+          { x: new Day('Monday', 10, 1), y: 480 },
+          { x: new Day('Monday', 11, 1), y: 510 }
+          ]
+        }
+        ]
+      });
+  
+      chart.render();
+    }
+    </script>
+   <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+  <body>
+    <div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
+  </body>
+  </html>
+
+
+{% endblock %}
